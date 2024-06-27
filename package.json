@@ -1,0 +1,18 @@
+{
+  "name": "flxmod-template2",
+  "main": "index.ts",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "frida-compile -S  -o dist/build.js -c index.ts",
+    "dev": "frida-compile -o dist/test.js -w index.ts",
+    "frida": "adb forward tcp:28042 tcp:28042 && adb forward tcp:28043 tcp:28043 && frida -H 127.0.0.1:28042 -F -l dist/test.js"
+  },
+  "devDependencies": {
+    "@types/frida-gum": "^17.2.0",
+    "@types/node": "^16.11.12",
+    "frida-compile": "^10.2.5",
+    "frida-il2cpp-bridge": "^0.7.13"
+  },
+  "dependencies": {}
+}
