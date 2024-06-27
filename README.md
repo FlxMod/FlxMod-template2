@@ -1,5 +1,6 @@
 # FlxMod-template2
-FlxMod-template2
+FlxMod-template2  
+[frida-il2cpp-bridge V0.7.13 Wiki](https://github.com/vfsfitvnm/frida-il2cpp-bridge/wiki/Snippets/24e6c11527c0943af7cae0d91eeae585fa649a9c)
 
 ## Usage
 
