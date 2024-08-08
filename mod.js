@@ -37,10 +37,8 @@ export const Mod = {
                     let tabitemindex = 1;
                     e2.item.forEach(e3 => {
                         if (e3?.callback) {
-                            let key = callbackindex;
-                            for (let index = 0; index < tabitemindex; index++) {
-                                key += ('_' + (index + 2))
-                            }
+                            let key = '1_';
+                            key += callbackindex+'_'+tabitemindex;
                             Mod.callbacks[key] = e3.callback;
                         }
                         tabitemindex++;
@@ -49,18 +47,7 @@ export const Mod = {
                 });
             } else {
                 if (e?.callback) {
-                    let key = '';
-                    if (callbackindex != 1) {
-                        for (let index = 0; index < callbackindex; index++) {
-                            if (index == 0) {
-                                key += (index + 1)
-                            } else {
-                                key += ('_' + (index + 1))
-                            }
-                        }
-                    } else {
-                        key = 1;
-                    }
+                    let key = callbackindex;
                     Mod.callbacks[key] = e.callback;
                 }
                 callbackindex++;
